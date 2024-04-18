@@ -1,0 +1,17 @@
+public class S21211_00v5 {
+
+	public static void main(String[] args) {
+		int x = 1;
+		int y = 2;
+		double result1 = x/y;
+		double result2 = (double)x/(double)y;
+		double result3 = (float)x/(float)y;
+		double result4 = (float)x/y;
+		
+		System.out.println("result1 : "+result1);
+		System.out.println("result2 : "+result2);
+		System.out.println("result3 : "+result3);
+		System.out.println("result4 : "+result4);
+		
+	}
+}
