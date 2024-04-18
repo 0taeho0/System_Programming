@@ -1,0 +1,14 @@
+public class S21211_00v6 {
+
+	public static void main(String[] args) {
+		Boolean stop = true;
+		Boolean start = true;
+		int i = 10;
+		if(i > 9  ) {
+			System.out.println("운행을 중지합니다");
+		}else{
+			System.out.println("운행을 시작 합니다");
+		}
+	
+	}
+}
