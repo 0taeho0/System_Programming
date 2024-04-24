@@ -1,0 +1,20 @@
+package taeho0920;
+
+import java.util.Scanner;
+
+public class Taeho0920 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("몇단볼래");
+		int 몇단 = sc.nextInt();
+		System.out.println("몇까지 볼래?");
+		int 고팔수 = sc.nextInt();
+	
+		for(int i=1;i<=고팔수;i++) {
+			System.out.println(몇단+"*"+i+"="+(몇단*i));
+		}
+		}	
+	}
+}
