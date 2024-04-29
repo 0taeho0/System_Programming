@@ -1,0 +1,24 @@
+package s21211_java20;
+
+public class Car {
+	static String s = "우리나라 자동차";
+	String company = "현대자동차";
+	String model;
+	String color;
+	int maxSpeed;
+	
+	Car(){
+	} 										//생성자 1					
+	Car(String model){						//생성자 2
+		this.model = model;
+	}
+	Car(String model, String color){		//생성자 3
+		this.model = model;
+		this.color = color;
+	}
+	Car(String model, String color, int maxSpeed){ // 셍상지 4
+		this.model = model;							// 공통실행 코드
+		this.color = color;							// 공통실행 코드
+		this.maxSpeed = maxSpeed;					// 공통실행 코드
+	}
+}
