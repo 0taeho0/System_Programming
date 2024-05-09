@@ -1,0 +1,28 @@
+package s21211_sort;
+
+public class Bubble_sort2 {
+
+	public static void main(String[] args) {
+		int[] array = {7, 5, 4, 3, 1};
+		
+		System.out.println("Array Length : "+array.length);
+		System.out.println("souce : ");
+		System.out.println(java.util.Arrays.toString(array));
+		
+		for(int i=1; i<array.length; i++) {
+			// 제일 큰 수를 맨 뒤에 보내기
+			for(int j=0; j < array.length - i; j++) {
+				if(array[j] > array[j+1]) {b
+					int temp = array[j+1];
+					array[j+1] = array[j];
+					array[j] = temp;
+				}
+			}
+			System.out.print("pass-" + i+" : ");
+			System.out.println(java.util.Arrays.toString(array));
+		}
+		System.out.print("result : ");
+		System.out.println(java.util.Arrays.toString(array));
+	}
+
+}
