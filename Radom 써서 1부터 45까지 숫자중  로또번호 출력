@@ -1,0 +1,96 @@
+package test000;
+
+import java.util.Scanner;
+
+public class Random {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		// 0.0~1.0 사이의 실수 난수 구하기
+		int lucknum = 0;
+		int index = 0;
+		int num = 0;
+		int [] arrnum = new int[100];
+		int [] arrok = new int[6];
+		int t = 0;
+		int temp = 0;
+		
+	    for(;true;) {
+	    	System.out.println("좋아하는 숫자를 입력하세요(1~9)");
+	    	lucknum = scan.nextInt();
+	    	if(lucknum >= 1 && lucknum <= 9) {
+	    		break;
+	    	}else {
+	    		System.out.println("다시 입력하세요");
+	    		continue;
+	    	}
+	    }
+	    숫자뽑고배열넣기(arrnum, arrok, num, lucknum);
+	    
+	    for (int i = 0; i < arrok.length; i++) {
+			System.out.print(arrok[i] + " ");
+		}
+	    System.out.println("");
+	    
+	    while(true) {
+	    	int a = 중복값제거(arrok, t);
+	    	
+	    	if(a == 0) 
+	    		break;
+	    	else {
+	    		숫자뽑고배열넣기(arrnum, arrok, num, lucknum);
+	    		중복값제거(arrok, t);
+	    		continue;
+	    	}
+	    }
+	    for(int i=1; i<arrok.length; i++) {
+			System.out.println("");
+			for(int j=0; j<arrok.length-i; j++) {
+				if(arrok[j] > arrok[j+1]) {
+					temp = arrok[j+1];
+					arrok[j+1] = arrok[j];
+					arrok[j] = temp;
+				}
+			}
+		}
+	    System.out.print("결과값 : ");
+		for(int i=0; i<arrok.length; i++) {
+			System.out.print(arrok[i] + " ");
+		}
+	
+	}
+	private static void 숫자뽑고배열넣기(int [] arrnum, int [] arrok, int num, int lucknum) {
+		for(int i=0; i<=arrnum.length-1; i++) {
+	    	arrnum[i] = (int) (Math.random() * 45) + 1;
+	    	System.out.print(arrnum[i]+" ");
+	    }
+	    System.out.println("");
+	    
+	    for(int i = lucknum + 1; i < arrnum.length; i++) {
+	    	arrok[num] = arrnum[i];
+	    	num++;
+	    	if(num == 6)
+	    		break;
+	    }
+	}
+
+	private static int 중복값제거(int [] arrok, int t) {
+		t = 0;
+		for(int i=0; i<arrok.length; i++) {
+	    	for(int j=0; j<arrok.length; j++) {
+	    		if(i != j) {
+	    			if(arrok[i] != arrok[j]) {
+	    				
+	    			} else {
+	    				System.out.println("중복값 발생");
+	    				t = 1;
+	    			}
+	    		}else {
+	    			continue;
+	    		}
+	    	}
+	    }
+		return t;
+		
+	}
+}
+ 
