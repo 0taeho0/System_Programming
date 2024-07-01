@@ -1,0 +1,53 @@
+* {margin: 0; padding: 0;}
+ul li{list-style: none; }
+a {color: #ffffff;text-decoration: none;}
+
+
+#header {
+	background-color: blue;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	color: #ffffff;
+	text-align: center;
+}
+
+#nav {
+	background-color: skyblue;
+	width: 100%;
+	height:	40px;
+	line-height: 40px;
+}
+
+ul li{
+	float: left;
+	padding: 0 10px;
+}
+
+.section {
+	background-color: lightgray;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.section p {
+	padding: 10px;
+}
+
+.section h2{
+	padding: 20xp 0;
+	text-align: center;
+}
+
+.footer {
+	font-size: 11px;
+	background-color: blue;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	bottom: 0;
+	position: fixed;
+	text-align: center;
+	color: #ffffff;
+}
